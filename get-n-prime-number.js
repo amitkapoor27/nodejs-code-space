@@ -1,18 +1,21 @@
 function getPrime(n){
-  let count=0;
-  let num=2;
-  while(count<n){
-    let dbCount=0;
-    for(let i=1;i<num;i++){
-      if(num%i==0){
-        dbCount++;
+  let num = 2;
+  const a = 100;
+  let b = 0;
+
+  while (b < a) {
+    let isPrime = true;
+    for (let i = 2; i < num; i++) {
+      if (num % i === 0) {
+        isPrime = false;
+        break;
       }
     }
-    if(dbCount<3){
+    if (isPrime) {
       console.log(num);
-      count++;
+      b++;
     }
-    num=num+1;
+    num++;
   }
 }
 
